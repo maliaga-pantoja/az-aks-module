@@ -1,13 +1,3 @@
-/**
- * # Terraform Azure <MODULE_NAME> Module - Interbank Cloud Engineering
- *
- * <MODULE_DESCRIPTION>.\
- * Author: <AUTHOR_EMAIL>\
- * <AUTHOR_NAME>
- *
- */
-
-# Write resources here
 data "azurerm_resource_group" "main" {
   name = var.resource_group_name
 }
@@ -559,7 +549,6 @@ resource "azurerm_kubernetes_cluster" "main" {
       http_application_routing_enabled,
       http_proxy_config[0].no_proxy,
       kubernetes_version,
-      public_network_access_enabled,
       # we might have a random suffix in cluster's name so we have to ignore it here, but we've traced user supplied cluster name by `null_resource.kubernetes_cluster_name_keeper` so when the name is changed we'll recreate this resource.
       name,
     ]
