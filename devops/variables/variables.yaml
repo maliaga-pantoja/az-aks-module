@@ -1,0 +1,8 @@
+variables:
+  terraform_version: "1.9.4"
+  artifactory_user: s41724
+  artifactory_repo: terraform_ibk_modules
+  artifactory_module_name: "ibk-sample-module"
+  artifactory_module_provider: azure
+  artifactory_namespace: "devsecops"
+  tag_name: "v0.0.0"
